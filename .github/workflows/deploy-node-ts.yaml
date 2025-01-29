@@ -2,7 +2,7 @@ name: Deploy to Production
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
@@ -33,4 +33,4 @@ jobs:
           git pull origin main
           npm ci
           pm2 restart github-pipeline-test
-EOF
+          EOF
