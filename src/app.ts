@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.json({ message: "Github pipeline testing!" });
+  res.json({ message: "Hey, I am from github pipeline!" });
 });
 
 app.listen(PORT, () => {
