@@ -24,7 +24,7 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
 
       - name: Test SSH Connection
-        run: ssh -v -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} "echo 'Connection successful'"
+        run: ssh -v -o ubuntu@${{ secrets.EC2_HOST }} "echo 'Connection successful'"
 
       - name: Deploy to EC2 instance
         run: |
