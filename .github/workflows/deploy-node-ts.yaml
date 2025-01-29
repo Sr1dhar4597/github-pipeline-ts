@@ -24,11 +24,11 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
 
       - name: Test SSH Connection
-        run: ssh -v -o ubuntu@${{ secrets.EC2_HOST }} "echo 'Connection successful'"
+        run: ssh -v -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} "echo 'Connection successful'"
 
       - name: Deploy to EC2 instance
         run: |
-          ssh -o ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
           nvm use 22.12.0
           cd ~/github-pipeline-ts
           git pull origin main
