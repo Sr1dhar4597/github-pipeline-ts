@@ -29,6 +29,8 @@ jobs:
       - name: Deploy to EC2 instance
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           nvm use 22.12.0
           cd ~/github-pipeline-ts
           git pull origin main
