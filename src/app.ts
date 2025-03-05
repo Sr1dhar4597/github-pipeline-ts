@@ -9,7 +9,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Hey, I have successfully deployed to an EC2 instance!",
+    message: "Hey, I am from Github Actions!",
   });
 });
 
