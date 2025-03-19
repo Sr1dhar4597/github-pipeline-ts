@@ -9,7 +9,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Hey, I am from Git!",
+    message: "Hey, I am from Azure",
   });
 });
 
